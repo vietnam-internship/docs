@@ -15,6 +15,7 @@
 | 9 | [user-flow.md](/prd/planning/user-flow.md) | User Flow | B | 초안 |
 | 10 | [wireframe-requirements.md](/prd/planning/wireframe-requirements.md) | Wireframe 요구사항 | B | 초안 |
 | 11 | [functional-requirements.md](/prd/planning/functional-requirements.md) | Functional Requirements | A+B | TBD |
+| 12 | [shop-inventory-policy.md](/prd/planning/shop-inventory-policy.md) | 환전소 재고 할당 & 불이행 보상 정책 | A | 초안 |
 
 ## 읽는 순서 (의존관계)
 ```
