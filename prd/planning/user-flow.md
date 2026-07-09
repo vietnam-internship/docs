@@ -10,6 +10,7 @@
 → 예약 완료 알림 수신 → [2시간 이내] 환전소 방문
 → 직원 신원확인(신분증) → 결제 → 외화 수령 → 예약 완료 처리
 ```
+<img src="./diagram/userflow_tourist.svg" width="500" alt="Tourist user flow">
 
 ## Exchange Shop 직원 Flow
 ```
@@ -18,6 +19,7 @@
 → 결제(현장) → 재고에서 홀드 해제 및 실제 출고 처리
 → 환전 완료 상태로 변경 → (미방문 시) 2시간 후 자동 취소, 재고 홀드 해제
 ```
+<img src="./diagram/userflow_staff.svg" width="500" alt="Exchange shop staff user flow">
 
 ## Admin Flow
 ```
@@ -25,6 +27,7 @@
 → 환전소별 우대율 데이터 검수 → 게시
 → 예약/거래 모니터링 → 고액 예약(1만달러 근접) 알림 확인
 ```
+<img src="./diagram/userflow_admin.svg" width="500" alt="Admin user flow">
 
 ## 관련 문서
 - [persona.md](./persona.md)

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 1432" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif">
+<title>Tourist user flow</title>
+<desc>Reservation phase: open app, enter currency, compare AI-sorted rates, select exchange shop, enter amount, select visit time, verify phone, get confirmation. Pickup phase (within 2 hours): visit shop, show ID, complete payment, receive currency, reservation complete.</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="#185FA5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+
+<rect x="180" y="60" width="320" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="340" y="82" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#0C447C">Open the app</text>
+<line x1="340" y1="104" x2="340" y2="164" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="180" y="164" width="320" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="340" y="186" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#0C447C">Enter currency</text>
+<line x1="340" y1="208" x2="340" y2="268" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="180" y="268" width="320" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="340" y="290" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#0C447C">Compare rates (AI-sorted)</text>
+<line x1="340" y1="312" x2="340" y2="372" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="180" y="372" width="320" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="340" y="394" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#0C447C">Select exchange shop</text>
+<line x1="340" y1="416" x2="340" y2="476" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="180" y="476" width="320" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="340" y="498" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#0C447C">Enter amount</text>
+<line x1="340" y1="520" x2="340" y2="580" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="180" y="580" width="320" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="340" y="602" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#0C447C">Select visit time</text>
+<line x1="340" y1="624" x2="340" y2="684" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="180" y="684" width="320" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="340" y="706" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#0C447C">Verify phone number</text>
+<line x1="340" y1="728" x2="340" y2="788" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="180" y="788" width="320" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="340" y="810" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#0C447C">Get confirmation notification</text>
+<line x1="340" y1="832" x2="340" y2="932" stroke="#185FA5" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+<text x="360" y="876" font-size="12" fill="#6B7280">Within 2 hours</text>
+
+<rect x="180" y="932" width="320" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="340" y="954" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#0C447C">Visit the shop</text>
+<line x1="340" y1="976" x2="340" y2="1036" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="180" y="1036" width="320" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="340" y="1058" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#0C447C">Show ID for verification</text>
+<line x1="340" y1="1080" x2="340" y2="1140" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="180" y="1140" width="320" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="340" y="1162" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#0C447C">Complete payment</text>
+<line x1="340" y1="1184" x2="340" y2="1244" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="180" y="1244" width="320" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="340" y="1266" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#0C447C">Receive foreign currency</text>
+<line x1="340" y1="1288" x2="340" y2="1348" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="180" y="1348" width="320" height="44" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="1"/>
+<text x="340" y="1370" text-anchor="middle" dominant-baseline="central" font-size="14" font-weight="600" fill="#0C447C">Reservation marked complete</text>
+
+</svg>
