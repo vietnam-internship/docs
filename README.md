@@ -4,25 +4,28 @@
 
 | # | 파일 | 제목 | 담당 | 상태 |
 |---|---|---|---|---|
-| 1 | [goal-kpi.md](/prd/planning/goal-kpi.md) | Goal & KPI | A | 초안 |
-| 2 | [scope.md](/prd/planning/scope.md) | Scope 선정 | A | 초안 |
-| 3 | [persona.md](/prd/planning/persona.md) | Persona | B | 초안 |
-| 4 | [competitor-research.md](/prd/planning/competitor-research.md) | Reference 조사 (경쟁 서비스) | A+B | 조사 완료 |
-| 5 | [legal-research.md](/prd/planning/legal-research.md) | 법률 및 규제 조사 | A | 조사 완료 |
-| 6 | [reservation-policy.md](/prd/planning/reservation-policy.md) | 예약정책 | A | 초안 |
-| 7 | [fx-data-model.md](/prd/planning/fx-data-model.md) | 환율 데이터 모델 | A | 초안 |
-| 8 | [ai-scope.md](/prd/planning/ai-scope.md) | AI 기능 범위 | B | 초안 |
-| 9 | [user-flow.md](/prd/planning/user-flow.md) | User Flow | B | 초안 |
-| 10 | [wireframe-requirements.md](/prd/planning/wireframe-requirements.md) | Wireframe 요구사항 | B | 초안 |
-| 11 | [functional-requirements.md](/prd/planning/functional-requirements.md) | Functional Requirements | A+B | TBD |
-| 12 | [shop-inventory-policy.md](/prd/planning/shop-inventory-policy.md) | 환전소 재고 할당 & 불이행 보상 정책 | A | 초안 |
+| 1 | [service-definition.md](/prd/planning/service-definition.md) | 서비스 정의 및 핵심 가치 | B | 초안 |
+| 2 | [goal-kpi.md](/prd/planning/goal-kpi.md) | Goal & KPI | A+B | 개정 완료 |
+| 3 | [scope.md](/prd/planning/scope.md) | Scope 선정 | A | 초안 |
+| 4 | [persona.md](/prd/planning/persona.md) | Persona | B | 초안 |
+| 5 | [competitor-research.md](/prd/planning/competitor-research.md) | Reference 조사 (경쟁 서비스) | A+B | 조사 완료 |
+| 6 | [legal-research.md](/prd/planning/legal-research.md) | 법률 및 규제 조사 | A | 조사 완료 |
+| 7 | [reservation-policy.md](/prd/planning/reservation-policy.md) | 예약정책 | A | 초안 |
+| 8 | [fx-data-model.md](/prd/planning/fx-data-model.md) | 환율 데이터 모델 | A | 초안 |
+| 9 | [ai-scope.md](/prd/planning/ai-scope.md) | AI 기능 범위 | B | 초안 |
+| 10 | [user-flow.md](/prd/planning/user-flow.md) | User Flow | B | 초안 |
+| 11 | [wireframe-requirements.md](/prd/planning/wireframe-requirements.md) | Wireframe 요구사항 | B | 초안 |
+| 12 | [functional-requirements.md](/prd/planning/functional-requirements.md) | Functional Requirements | A+B | TBD |
+| 13 | [shop-inventory-policy.md](/prd/planning/shop-inventory-policy.md) | 환전소 재고 할당 & 불이행 보상 정책 | A | 초안 |
+| 14 | [no-show-strategy.md](/prd/planning/no-show-strategy.md) | 노쇼 리스크 방지 및 환전소 파트너 효용 전략 | B | 초안 |
 
 ## 읽는 순서 (의존관계)
 ```
-goal-kpi → scope ─┬─→ ai-scope
-                  └─→ persona → user-flow → wireframe-requirements
+service-definition → goal-kpi → scope ─┬─→ ai-scope
+                                        └─→ persona → user-flow → wireframe-requirements
 scope, persona 확정 후:
 reservation-policy, fx-data-model (legal-research 근거) → functional-requirements
+shop-inventory-policy + reservation-policy → no-show-strategy
 ```
 
 ## 핵심 크로스체크 항목
@@ -30,3 +33,5 @@ reservation-policy, fx-data-model (legal-research 근거) → functional-require
 - `persona.md`의 신뢰 Pain Point → `reservation-policy.md`의 신뢰 보완 장치 반영 여부
 - `user-flow.md`의 "2시간 자동취소" ↔ `reservation-policy.md` 수치 일치 여부
 - `scope.md`의 AI 보조기능 명시 ↔ `ai-scope.md` KPI 방향 일치 여부
+- `no-show-strategy.md` 노쇼 리스크 제어 정책 ↔ `reservation-policy.md` 홀드 정책 간의 일치 여부
+
