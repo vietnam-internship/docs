@@ -16,10 +16,10 @@ sequenceDiagram
     participant Server as Server (Backend API)
     participant DB as Database
 
-    User->>Server: Search currency / request rate comparison (GET /currencies)
-    Server->>DB: Query per-branch rates + latest recommendation signal
-    DB-->>Server: Rate rows + recommendation (Now/Wait/Neutral)
-    Server-->>User: Rate comparison list + recommendation badge (with disclaimer)
+    User->>Server: Request rate comparison
+    Server->>DB: Query rate data
+    DB-->>Server: Rate data response
+    Server-->>User: Return rate comparison result + recommendation badge
 
     Note over Server,DB: Rates are refreshed once daily by an offline batch job (not shown)
 ```
@@ -32,24 +32,21 @@ sequenceDiagram
     participant Server as Server (Backend API)
     participant DB as Database
 
-    User->>Server: Select currency/amount/branch/pickup date-time and confirm
-    Server->>DB: BEGIN TRANSACTION
-    Server->>DB: SELECT stock FOR UPDATE (branch + currency)
-    DB-->>Server: Current stock
+    User->>Server: Request currency exchange reservation
+    Server->>DB: Check stock
+    DB-->>Server: Stock status response
 
-    alt Sufficient stock (stock >= amount)
-        Server->>DB: Deduct stock, insert Reservation (RESERVED), insert notification, COMMIT
-        DB-->>Server: Success
-        Server-->>User: 201 Created + confirmation (reservation No./QR)
+    alt Sufficient stock
+        Server->>DB: Process reservation (deduct stock + register reservation)
+        DB-->>Server: Processing complete
+        Server-->>User: Reservation complete + confirmation returned
     else Insufficient stock
-        Server->>DB: ROLLBACK
-        DB-->>Server: Rolled back
-        Server-->>User: 409 Conflict (stock insufficient)
+        Server-->>User: Reservation failed response
     end
 
     Note over User,Server: On cancellation
-    User->>Server: Request cancellation (DELETE /reservations/{id})
-    Server->>DB: Set status = CANCELLED, restore stock (+amount), insert notification, COMMIT
-    DB-->>Server: Success
-    Server-->>User: 200 OK
+    User->>Server: Request cancellation
+    Server->>DB: Process cancellation (restore stock + update status)
+    DB-->>Server: Processing complete
+    Server-->>User: Cancellation complete response
 ```
