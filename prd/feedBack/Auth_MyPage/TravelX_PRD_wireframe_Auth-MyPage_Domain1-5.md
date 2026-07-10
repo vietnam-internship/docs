@@ -100,7 +100,6 @@ MYPAGE-02 (알림함)
 
 | PRD 위치 | 기존 내용 | 이번 화면설계 반영/수정 사항 |
 |---|---|---|
-| §6.1 User Features | 프로필 조회 항목 자체가 없음 |
 | §8 Functional Requirements | `Notifications` 행은 알림 "생성" 트리거만 정의, 조회/읽음처리 없음 |
 | §24 Wireframe Requirements 표 | My Page/Notification 화면 행 없음 |
 
