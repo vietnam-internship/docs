@@ -119,13 +119,3 @@ MY-01          MyPage (Profile) → RSV-01(My Reservation) / RSV-04(Exchange His
 | AI Report 지속기간 로직 추가 또는 문구 교체 | §9.3~9.6 |
 | MY-01 화면 ID 표기 수정 | §24 / My Reservation 도메인 문서와 교차 정리 |
 
----
-
-## 5. 확인이 필요한 질문 (팀/멘토 논의용)
-
-1. REGISTER-01의 Full Name은 Google 프로필 값 프리필 + 수정 가능인가, 완전 수동 입력인가?
-2. 체크박스/약관 링크 탭 시 실제 이동 목적지는 Google Login Page가 맞는가, 오기인가?
-3. 가입 시 수집한 Phone Number를 예약 시점 KYC 인증에서 재사용(프리필)하는가, 완전히 별도로 다시 받는가?
-4. HOME-02의 환율 변동 알림(rate alert)을 MVP에 포함할 것인가, §16 Future Features대로 이번 범위에서 제외할 것인가?
-5. MY-01에서 "My Reservation"/"Exchange history"가 가리키는 실제 화면 ID는 RSV-01/RSV-04가 맞는가?
-6. HOME-01 AI Report의 "2-4일 지속" 문구는 실제 구현 목표(추가 통계 로직 필요)인가, 목업 예시 텍스트일 뿐인가?
