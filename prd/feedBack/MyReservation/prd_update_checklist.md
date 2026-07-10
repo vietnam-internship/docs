@@ -5,6 +5,18 @@
 >
 > 형식: **[PRD 섹션 (페이지)] — 문제 → 수정 제안**. 체크박스는 각 섹션 원본에 실제로 반영했을 때 체크.
 
+
+## 1. 지금까지 와이어프레임에서 정리된 내용 (F4: My Reservation)
+
+| 화면 ID | 주요 내용 |
+|---|---|---|
+| MYRSV-01 | Look up the list of currency exchanges that you have currently booked.
+It will be implemented as an infinite scroll. |
+| MYRSV-02 | Inquire the list of completed currency exchange transaction details.
+There are two states: Completed and Canceled.
+It will be implemented as an infinite scroll.
+| MYRSV-03 | Check the details of past currency exchange transaction details |
+
 ---
 
 ## §6.1 User Features (p.5)
