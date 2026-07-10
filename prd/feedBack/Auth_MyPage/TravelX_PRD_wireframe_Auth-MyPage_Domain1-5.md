@@ -117,10 +117,8 @@ MYPAGE-02 (알림함)
 | PRD 위치 | 기존 내용 | 이번 화면설계 반영/수정 사항 |
 |---|---|---|
 | §6.1 User Features > Authentication | "Sign in with Google", "Log out" 두 줄만 존재 | AUTH-01(로그인 화면 상세: 로고/소개/버튼/약관 안내), AUTH-02(OAuth 리다이렉트 로딩), AUTH-03(로그인 실패 화면)으로 **화면 단위 세분화**. PRD 문구 자체는 유지, 화면 스펙만 구체화 |
-| §8 Functional Requirements — `Sign In with Google` 행 | Input: Google OAuth2 ID token / Output: 계정 생성·조회, 세션 시작 | 이 흐름이 AUTH-01→AUTH-02(성공 시 RSV-01)로 매핑됨을 확인. **로그인 실패 시나리오(AUTH-03)에 대한 기능 요구사항이 PRD에 없어 추가 필요** |
-| §14 API Specification | `/oauth2/authorization/google`, `/auth/google/callback`, `/auth/logout` | 화면-API 매핑: AUTH-01 버튼 → `/oauth2/authorization/google` 호출, AUTH-02 → `/auth/google/callback` 결과 대기, MYPAGE-01-POPUP 로그아웃 → `/auth/logout` |
-| §24 Wireframe Requirements 표 | Auth 관련 화면 행 없음 | **추가 필요**: Login / OAuth Loading / Login Error 3행 |
-| (신규) | — | 회원가입·비밀번호 찾기 화면이 **의도적으로 없음**을 PRD 또는 와이어프레임 문서에 명시적으로 각주 처리 권장 (다른 팀원 혼선 방지) |
+| §8 Functional Requirements — `Sign In with Google` 행 | Input: Google OAuth2 ID token / Output: 계정 생성·조회, 세션 시작 | 이 흐름이 AUTH-01→AUTH-02(성공 시 RSV-01)로 매핑됨을 확인. |
+| §24 Wireframe Requirements 표 | Auth 관련 화면 행 없음 |
 
 ### 7.2 마이페이지 & 알림 (MYPAGE) 관련
 
@@ -128,8 +126,5 @@ MYPAGE-02 (알림함)
 |---|---|---|
 | §6.1 User Features | 프로필 조회 항목 자체가 없음 | **신규 추가 필요**: "프로필 조회" 항목. MYPAGE-01 화면 스펙(이름/이메일 읽기전용 카드)으로 구체화 |
 | §8 Functional Requirements | `Notifications` 행은 알림 "생성" 트리거만 정의, 조회/읽음처리 없음 | MYPAGE-02(알림함 리스트, 개별 읽음 처리, 전체 읽음 처리) 스펙 추가 → PRD에 `Notification List/Read` 행 **신규 추가 필요** |
-| §12 Database Design — `Notification` 엔티티 | id, userId, type, message, isRead, createdAt 존재 | 필드는 화면 요구사항과 그대로 부합, **스키마 변경 불필요**. 다만 `type` enum 값(reservation_completed / reservation_cancelled / pickup_reminder)을 PRD에 명시적으로 나열하는 편이 좋음 |
-| §14 API Specification | 알림 생성/발송 관련 엔드포인트 없음 | **신규 추가 필요**: `GET /notifications`(목록), `PATCH /notifications/{id}/read`(개별 읽음), `PATCH /notifications/read-all`(전체 읽음) |
-| §14 API Specification | 사용자 프로필 조회 엔드포인트 없음 | **신규 추가 필요**: `GET /users/me` |
 | §24 Wireframe Requirements 표 | My Page/Notification 화면 행 없음 | **추가 필요**: My Page / Notification List 2행 |
 
